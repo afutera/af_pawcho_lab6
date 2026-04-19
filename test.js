@@ -7,7 +7,7 @@ let adres=undefined;
 const sieci=os.networkInterfaces();
 for(const s of Object.keys(sieci)){
     for(const a of sieci[s]){
-        console.log(adres===undefined,!a.internal,a.family==="IPv4", a)
+        //console.log(adres===undefined,!a.internal,a.family==="IPv4", a)
         if(adres===undefined&&!a.internal&&a.family==="IPv4") adres=a.address;
     }
 }
